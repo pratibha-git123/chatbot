@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.callout {
+  position: fixed;
+  bottom: 35px;
+  right: 20px;
+  margin-left: 20px;
+  max-width: 300px;
+}
+
+.callout-header {
+  padding: 25px 15px;
+  background: #555;
+  font-size: 30px;
+  color: white;
+}
+
+.callout-container {
+  padding: 15px;
+  background-color: #ccc;
+  color: black
+}
+
+.closebtn {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  color: rgb(196, 39, 39);
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.closebtn:hover {
+  color: rgb(179, 70, 70);
+}
+</style>
+</head>
+<body>
+
+<h2>Creating Chat bot</h2>
+Start Chat bot...
+<p>Click on the "x" symbol to close the callout message.</p>
+<div class="callout">
+  <div class="callout-header">IBM Chatbot</div>
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+  <div class="callout-container">
+    <p>Click here to start<a href="#">Click here to start <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "0957fc99-3ce7-4034-93f8-ab287f2ac965", // The ID of this integration.
+          region: "eu-gb", // The region your integration is hosted in.
+          serviceInstanceID: "c917fa4a-ef53-4ea7-b08f-e181053e3899", // The ID of your service instance.
+          onLoad: async (instance) => { await instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+      </script></a></p>
+  </div>
+</div>
+
+</body>
+</html>
